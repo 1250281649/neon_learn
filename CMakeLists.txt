@@ -14,3 +14,7 @@ include_directories(
 add_executable(lesson_01_types src/lesson_01_types.cpp)
 
 add_executable(lesson_02_init_reg src/lesson_02_init_reg.cpp)
+
+add_executable(lesson_03_load src/lesson_03_load.cpp)
+
+add_executable(lesson_04_store src/lesson_04_store.cpp)
