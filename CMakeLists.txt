@@ -11,4 +11,4 @@ include_directories(
 )
 
 #================== tutorial examples example ==================
-add_executable(${PROJECT_NAME} src/tutorial_01.cpp)
+add_executable(lesson_01_types src/lesson_01_types.cpp)
