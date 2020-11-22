@@ -7,8 +7,10 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -ldl")
 
 #include files
 include_directories(
-	../
+	include
 )
 
 #================== tutorial examples example ==================
 add_executable(lesson_01_types src/lesson_01_types.cpp)
+
+add_executable(lesson_02_init_reg src/lesson_02_init_reg.cpp)
