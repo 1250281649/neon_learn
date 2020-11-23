@@ -10,7 +10,7 @@ include_directories(
 	include
 )
 
-#================== tutorial examples example ==================
+#================== tutorial examples ==================
 add_executable(lesson_01_types src/lesson_01_types.cpp)
 
 add_executable(lesson_02_init_reg src/lesson_02_init_reg.cpp)
@@ -18,3 +18,7 @@ add_executable(lesson_02_init_reg src/lesson_02_init_reg.cpp)
 add_executable(lesson_03_load src/lesson_03_load.cpp)
 
 add_executable(lesson_04_store src/lesson_04_store.cpp)
+
+
+#================== Applications examples ==================
+add_executable(sort_with_index src/sort_with_index.cpp)

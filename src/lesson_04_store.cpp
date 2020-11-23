@@ -9,7 +9,7 @@ int main()
         printf("vst[x]_type(Scalar_t *N) x=1\n");
         int8x8_t s8_1 = vdup_n_s8(5);
         vst1_s8(data, s8_1);
-        print_neon_valude<int8x8_t>(s8_1);
+        print_neon_value_hex<int8x8_t>(s8_1);
         print_array<int8_t>(data, sizeof(data));
     }
 
@@ -18,7 +18,7 @@ int main()
         memset(data, 0, sizeof(data));
         int8x8_t s8_2 = vdup_n_s8(6);
         vst1_lane_s8(data, s8_2, 2);
-        print_neon_valude<int8x8_t>(s8_2);
+        print_neon_value_hex<int8x8_t>(s8_2);
         print_array<int8_t>(data, sizeof(data));       
     }
 
