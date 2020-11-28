@@ -23,6 +23,7 @@ add_executable(lesson_03_load src/lesson_03_load.cpp)
 
 add_executable(lesson_04_store src/lesson_04_store.cpp)
 
+add_executable(lesson_05_get_set src/lesson_05_get_set.cpp)
 
 #================== Applications examples ==================
 add_executable(sort_with_index src/sort_with_index.cpp)
