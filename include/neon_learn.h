@@ -18,7 +18,7 @@ void print_neon_value_hex(T value)
 template <typename T1, typename T2>
 void print_neon(T1 value, const char*info=NULL)
 {
-    if(!info)
+    if(info)
     {
         printf("%s", info);
     }
