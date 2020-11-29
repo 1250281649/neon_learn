@@ -2,7 +2,7 @@ title Neon Learn Note
 adb remount || goto failed
 
 adb push ./Bin /system/bin || goto failed
-adb shell "lesson_08_vmul"
+adb shell "lesson_10_compare"
 
 echo "Successfully"
 pause

@@ -2,7 +2,7 @@
 
 int main()
 {
-    printf("===========Neon Get & Set Instructions===========\n");
+    printf("===========Neon ADD Instructions===========\n");
     int8x8_t vdata1 = {0, 10, 100, 127, -10, -100, -128, -128};
     int8x8_t vdata2 = {4, 9,  27,  3,   -9,  -100, -128, -1};
     int16x8_t vdata3 = {0, 10, 100, 127, -10, -100, -128, -128};

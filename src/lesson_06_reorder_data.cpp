@@ -2,7 +2,7 @@
 
 int main()
 {
-    printf("===========Neon Get & Set Instructions===========\n");
+    printf("===========Neon Reorder Instructions===========\n");
     int8_t  data8[16] = TEST_DATA;
     {
         int8x8_t s8_1 = vld1_s8(data8);
