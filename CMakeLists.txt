@@ -35,5 +35,7 @@ add_executable(lesson_09_math src/lesson_09_math.cpp)
 
 add_executable(lesson_10_compare src/lesson_10_compare.cpp)
 
+add_executable(lesson_11_reduce src/lesson_11_reduce.cpp)
+
 #================== Applications examples ==================
 add_executable(sort_with_index src/sort_with_index.cpp)
