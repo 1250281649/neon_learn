@@ -55,8 +55,44 @@ int main()
 
         int8x8x2_t trn_1 = vtrn_s8(vdata1, vdata2);
         print_neon<int8x8x2_t, int8_t>(trn_1, "trn_1:");
-        print_neon<int8x8_t, int8_t>(trn_1.val[0], "trn_1.0:");
-        print_neon<int8x8_t, int8_t>(trn_1.val[1], "trn_1.1:");
+    }
+
+    {
+        printf("\ntest vzip instruction\n");
+        int8x8_t vdata1 = {0,1,2,3,4,5,6,7};
+        int8x8_t vdata2 = {8,9,10,11,12,13,14,15};
+
+        print_neon<int8x8_t, int8_t>(vdata1, "vdata1:");
+        print_neon<int8x8_t, int8_t>(vdata2, "vdata2:");
+
+        int8x8x2_t zip_1 = vzip_s8(vdata1, vdata2);
+        print_neon<int8x8x2_t, int8_t>(zip_1, "zip_1:");
+    }
+
+    {
+        printf("\ntest vuzp instruction\n");
+        int8x8_t vdata1 = {0,1,2,3,4,5,6,7};
+        int8x8_t vdata2 = {8,9,10,11,12,13,14,15};
+
+        print_neon<int8x8_t, int8_t>(vdata1, "vdata1:");
+        print_neon<int8x8_t, int8_t>(vdata2, "vdata2:");
+
+        int8x8x2_t uzp_1 = vuzp_s8(vdata1, vdata2);
+        print_neon<int8x8x2_t, int8_t>(uzp_1, "uzp_1:");
+    }
+
+    {
+        printf("\ntest vbsl instruction\n");
+        int8x8_t vdata1 = {0,1,2,3,4,5,6,7};
+        int8x8_t vdata2 = {8,9,10,11,12,13,14,15};
+        uint8x8_t vmask = {0, 3, 255, 8, 7, 127, 255, 10};
+
+        print_neon<int8x8_t, int8_t>(vdata1, "vdata1:");
+        print_neon<int8x8_t, int8_t>(vdata2, "vdata2:");
+        print_neon<uint8x8_t, uint8_t>(vmask, "vmask :");
+
+        int8x8_t zbsl_1 = vbsl_s8(vmask, vdata1, vdata2);
+        print_neon<int8x8_t, int8_t>(zbsl_1, "zbsl_1:");
     }
 
     return 0;
