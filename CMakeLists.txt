@@ -47,3 +47,5 @@ add_executable(lesson_12_logic src/lesson_12_logic.cpp)
 add_executable(sort_with_index src/examples/sort_with_index.cpp)
 
 add_executable(image_rgb_packed2planar src/examples/image_rgb_packed2planar.cpp ${TOOLS_SRC})
+
+add_executable(image_rgb2gray src/examples/image_rgb2gray.cpp ${TOOLS_SRC})
