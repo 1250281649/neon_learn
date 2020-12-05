@@ -21,5 +21,8 @@ copy_to_share()
         exit 1
     fi
 
+    # copy test data
+    cp -rf ${BUILD_DIR}/../testdata/ ${BUILD_DIR}/output/
+
     cp -rf ${BUILD_DIR}/output/* /mnt/hgfs/VM_Share/neon_out
 }

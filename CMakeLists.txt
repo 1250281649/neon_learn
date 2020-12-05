@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.6)
 project(neon_learn)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fPIC -pthread -std=c++11 -mfpu=neon -mfloat-abi=softfp")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -Os -fPIC -pthread -std=c++11 -mfpu=neon -mfloat-abi=softfp")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -Os -fPIC")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -ldl")
+set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Lib)
@@ -12,7 +13,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Bin)
 #include files
 include_directories(
 	include
+	src
 )
+
+set(TOOLS_SRC src/tools/utils.cpp)
 
 #================== tutorial examples ==================
 add_executable(lesson_01_types src/lesson_01_types.cpp)
@@ -40,4 +44,6 @@ add_executable(lesson_11_reduce src/lesson_11_reduce.cpp)
 add_executable(lesson_12_logic src/lesson_12_logic.cpp)
 
 #================== Applications examples ==================
-add_executable(sort_with_index src/sort_with_index.cpp)
+add_executable(sort_with_index src/examples/sort_with_index.cpp)
+
+add_executable(image_rgb_packed2planar src/examples/image_rgb_packed2planar.cpp ${TOOLS_SRC})

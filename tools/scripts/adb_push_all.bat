@@ -1,8 +1,12 @@
 title Neon Learn Note
 adb remount || goto failed
 
+@REM remove old files
+adb shell "rm -rf /sdcard/blackbox/testdata"
+
 adb push ./Bin /system/bin || goto failed
-adb shell "lesson_06_reorder_data"
+adb push ./testdata /sdcard/blackbox/testdata || goto failed
+adb shell "image_rgb_packed2planar"
 
 echo "Successfully"
 pause

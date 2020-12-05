@@ -32,12 +32,33 @@ void print_neon(T1 value, const char*info=NULL)
 }
 
 template <typename T>
-void print_array(T *data, int len)
+void print_array(T *data, int len, const char*info=NULL)
 {
+    if(info)
+    {
+        printf("%s", info);
+    }
+
     uint8_t *p = (uint8_t*)(data);
     for(int i=0; i<len; i++)
     {
-        printf("%d\t", *p++);
+        printf("%3d ", *p++);
+    }
+    printf("\n");
+}
+
+template <typename T>
+void print_array_hex(T *data, int len, const char*info=NULL)
+{
+    if(info)
+    {
+        printf("%s", info);
+    }
+
+    uint8_t *p = (uint8_t*)(data);
+    for(int i=0; i<len; i++)
+    {
+        printf("%02x ", *p++);
     }
     printf("\n");
 }
