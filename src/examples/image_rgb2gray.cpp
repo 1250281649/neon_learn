@@ -56,7 +56,7 @@ int RGB2Gray(uint8_t * packed, uint8_t* gray, int height, int width)
 
 int main()
 {
-    printf("===========Neon RGB Packed -> RGB Planar===========\n");
+    printf("===========Neon RGB -> Gray===========\n");
     void *img_data = NULL;
     int img_size =0;
 

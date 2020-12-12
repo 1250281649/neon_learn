@@ -11,6 +11,7 @@ package_neon_bin()
 
     cp -rf Bin/ output/
     cp ../tools/scripts/adb_push_all.bat output/
+    cp ../tools/scripts/adb_push_bin.bat output/
 }
 
 copy_to_share()
