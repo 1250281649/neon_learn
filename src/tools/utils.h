@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string>
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -38,3 +39,9 @@ int ReadBinaryFile(const char* path, void** data, int *len);
 std::string GetDataPath(const char* path);
 
 uint64_t GetCurrentTimestap();
+
+template<typename T>
+bool IsEqual(T data1, T data2)
+{
+    return memcmp((void*)&data1, (void*)&data2, sizeof(T)) == 0;
+}

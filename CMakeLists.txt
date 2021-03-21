@@ -44,10 +44,19 @@ add_executable(lesson_11_reduce src/lesson_11_reduce.cpp)
 add_executable(lesson_12_logic src/lesson_12_logic.cpp)
 
 #================== Applications examples ==================
-add_executable(sort_with_index src/examples/sort_with_index.cpp)
+add_executable(sort_with_index src/examples/sort_with_index.cpp ${TOOLS_SRC})
 
 add_executable(image_rgb_packed2planar src/examples/image_rgb_packed2planar.cpp ${TOOLS_SRC})
 
 add_executable(image_rgb2gray src/examples/image_rgb2gray.cpp ${TOOLS_SRC})
 
 add_executable(image_rotation src/examples/image_rotation.cpp ${TOOLS_SRC})
+
+add_subdirectory(thirdparty/googletest)
+set(TEST_SRC
+	src/main.cpp
+	src/lesson_13_assember.cpp
+)
+add_executable(neon_gtest ${TEST_SRC})
+target_link_libraries(neon_gtest gtest)
+target_include_directories(neon_gtest PUBLIC thirdparty/googletest/googletest/include)

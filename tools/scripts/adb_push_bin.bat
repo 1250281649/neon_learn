@@ -3,7 +3,7 @@ adb remount || goto failed
 
 adb shell "mkdir /sdcard/blackbox/testdata/output"
 adb push ./Bin /system/bin || goto failed
-adb shell "image_rotation"
+adb shell "neon_gtest"
 
 echo "Successfully"
 pause
