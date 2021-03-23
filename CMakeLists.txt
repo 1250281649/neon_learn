@@ -55,6 +55,7 @@ add_executable(image_rotation src/examples/image_rotation.cpp ${TOOLS_SRC})
 add_subdirectory(thirdparty/googletest)
 set(TEST_SRC
 	src/main.cpp
+	${TOOLS_SRC}
 	src/lesson_13_assember.cpp
 )
 add_executable(neon_gtest ${TEST_SRC})

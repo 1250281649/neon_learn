@@ -42,7 +42,7 @@ void print_array(T *data, int len, const char*info=NULL)
     uint8_t *p = (uint8_t*)(data);
     for(int i=0; i<len; i++)
     {
-        printf("%3d ", *p++);
+        printf("%3d ", *(p++));
     }
     printf("\n");
 }
